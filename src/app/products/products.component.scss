@@ -1,0 +1,10 @@
+table{
+  width: 100%;
+}
+:host{
+  height: 100vh;
+  overflow: scroll;
+  width:50%;
+  position: relative;
+  display: block;
+}
