@@ -14,6 +14,9 @@ export class TextFieldComponent extends FieldComponent implements OnInit {
   public label: string;
 
   @Input()
+  public type: string;
+
+  @Input()
   public maxlength: number;
 
   @Input()

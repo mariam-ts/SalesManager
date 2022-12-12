@@ -10,3 +10,6 @@ mat-sidenav-container{
   }
   padding: 0;
 }
+::ng-deep .mat-drawer-content{
+  overflow:hidden !important;
+}

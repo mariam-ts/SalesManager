@@ -13,9 +13,10 @@ export class EditComponent {
   constructor(){}
 
   public form: FormGroup= new FormGroup({
-    name: new FormControl('', [Validators.required]),
-    price: new FormControl(undefined, [Validators.required]),
-    quantity: new FormControl(undefined, [Validators.required]),
+    userName: new FormControl('', [Validators.required]),
+    firstName: new FormControl('', [Validators.required]),
+    lastName: new FormControl('', [Validators.required]),
+    password: new FormControl('', [Validators.required]),
   })
 
 }

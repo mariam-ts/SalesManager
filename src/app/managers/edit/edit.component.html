@@ -4,9 +4,10 @@
 </ng-template>
 
 <div class="form">
-    <app-text-field [formControl]="$any(form).controls.name" label="Name"></app-text-field>
-    <app-money-field [formControl]="$any(form).controls.price" label="Price"></app-money-field>
-    <app-number-field [formControl]="$any(form).controls.quantity" label="Quantity"></app-number-field>
+    <app-text-field [formControl]="$any(form).controls.userName" label="User Name"></app-text-field>
+    <app-text-field [formControl]="$any(form).controls.firstName" label="First Name"></app-text-field>
+    <app-text-field [formControl]="$any(form).controls.lastName" label="Last Name"></app-text-field>
+    <app-text-field [type]="'password'" [formControl]="$any(form).controls.password" label="Password"></app-text-field>
     <button *ngIf="manager; else update">Create</button>
     <ng-template #update>
         <button mat-button color="primary">Update</button>

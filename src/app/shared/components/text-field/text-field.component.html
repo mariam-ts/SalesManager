@@ -1,7 +1,7 @@
 <mat-form-field appearance="standard"
   [class.mat-form-field-invalid]="ngControl.control.dirty && ngControl.control.invalid">
   <mat-label>{{label}}</mat-label>
-  <input matInput [disabled]="disabled" [ngModel]="value" [maxlength]="maxlength" (ngModelChange)="change($event)"
+  <input matInput [type]="type" [disabled]="disabled" [ngModel]="value" [maxlength]="maxlength" (ngModelChange)="change($event)"
     (blur)="blur()" [autocomplete]="autocomplete ? 'on' : 'off'">
 
   <!-- <app-shared-form-messages [control]="ngControl.control"></app-shared-form-messages> -->

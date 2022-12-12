@@ -1,0 +1,10 @@
+.form{
+    display: flex;
+    flex-direction: column;
+    padding: 0 5%;
+    width: 80%;
+
+    button{
+        width:fit-content;
+    }
+}
