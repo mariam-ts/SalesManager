@@ -1,0 +1,9 @@
+<app-shared-bar [addBtn]="true">Managers</app-shared-bar>
+<app-table [data]="data" [displayedColumns]="displayedColumns">
+  <app-table-column-text name="id" headerText="No"></app-table-column-text>
+  <app-table-column-text name="userName" headerText="User Name"></app-table-column-text>
+  <app-table-column-text name="firstName" headerText="First Name"></app-table-column-text>
+  <app-table-column-text name="lastName" headerText="Last Name"></app-table-column-text>
+  <app-table-column-date name="registrationDate" headerText="Registration Date"></app-table-column-date>
+  <app-table-column-money name="salesSum" headerText="Sales sum." [currency]="currency.USD"></app-table-column-money>
+</app-table>
