@@ -1,0 +1,45 @@
+@use '@angular/material' as mat;
+@import '@angular/material/theming';
+
+@mixin app-theme($theme) {
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+  $warn: map-get($theme, warn);
+  $background: map-get($theme, background);
+  $foreground: map-get($theme, foreground);
+  $app: map-get($theme, app);
+  $row: mat.get-color-from-palette($background, card);
+  $hover: opacify(mix($row, mat.get-color-from-palette($primary, 500), 90%), 1);
+
+  .mat-sidenav{
+    box-shadow: 0 8px 10px -5px rgba(0, 0, 0, 0.2), 0px 16px 24px 2px rgba(0, 0, 0, 0.14), 0px 6px 30px 5px rgba(0, 0, 0, 0.12);
+    background-color: mat.get-color-from-palette($primary, 500);
+    border-right: solid 1px mat.get-color-from-palette($primary);
+
+    ul{
+      li:hover{
+        background-color: mat.get-color-from-palette($background, 'hover', .1);
+      }
+
+    }
+  }
+
+  tbody {
+    td {
+      transition: background-color 400ms;
+    }
+    tr {
+      transition: background-color 400ms;
+
+      &:hover {
+        background-color: $hover;
+      }
+    }
+  }
+
+  mat-sidenav{
+    color:white;
+  }
+
+}
+

@@ -1,0 +1,73 @@
+@use "sass:color";
+@import '@angular/material/theming';
+
+$app-primary: #3849a5;
+$app-accent: #789900;
+$app-red: #C62828;
+$app-warn: #f7cdcd;
+
+$app-primary-palette: (
+  50: color.scale($app-primary, $lightness: 90%),
+  100: color.scale($app-primary, $lightness: 80%),
+  200: color.scale($app-primary, $lightness: 60%),
+  300: color.scale($app-primary, $lightness: 40%),
+  400: color.scale($app-primary, $lightness: 20%),
+  500: color.scale($app-primary, $lightness: 0%),
+  600: color.scale($app-primary, $lightness: -20%),
+  700: color.scale($app-primary, $lightness: -30%),
+  800: color.scale($app-primary, $lightness: -60%),
+  900: color.scale($app-primary, $lightness: -80%),
+  A100: color.scale($app-primary, $lightness: 20%, $saturation: 30%),
+  A200: color.scale($app-primary, $lightness: 0%, $saturation: 30%),
+  A400: color.scale($app-primary, $lightness: -20%, $saturation: 30%),
+  A700: color.scale($app-primary, $lightness: -40%, $saturation: 30%),
+  contrast: (
+    50: black,
+    100: black,
+    200: black,
+    300: black,
+    400: black,
+    500: white,
+    600: white,
+    700: white,
+    800: white,
+    900: white,
+    A100: black,
+    A200: black,
+    A400: black,
+    A700: white,
+  )
+);
+
+$app-accent-palette: (
+  50: color.scale($app-accent, $lightness: 50%),
+  100: color.scale($app-accent, $lightness: 40%),
+  200: color.scale($app-accent, $lightness: 30%),
+  300: color.scale($app-accent, $lightness: 20%),
+  400: color.scale($app-accent, $lightness: 10%),
+  500: color.scale($app-accent, $lightness: 0%),
+  600: color.scale($app-accent, $lightness: -10%),
+  700: color.scale($app-accent, $lightness: -20%),
+  800: color.scale($app-accent, $lightness: -30%),
+  900: color.scale($app-accent, $lightness: -40%),
+  A100: color.scale($app-accent, $lightness: 10%, $saturation: 30%),
+  A200: color.scale($app-accent, $lightness: 0%, $saturation: 30%),
+  A400: color.scale($app-accent, $lightness: -10%, $saturation: 30%),
+  A700: color.scale($app-accent, $lightness: -20%, $saturation: 30%),
+  contrast: (
+    50: black,
+    100: black,
+    200: black,
+    300: black,
+    400: black,
+    500: white,
+    600: white,
+    700: white,
+    800: white,
+    900: white,
+    A100: black,
+    A200: black,
+    A400: black,
+    A700: white,
+  )
+);

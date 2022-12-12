@@ -1,0 +1,8 @@
+<mat-form-field  floatLabel="always"
+    [class.mat-form-field-invalid]="ngControl.control.dirty && ngControl.control.invalid">
+    <mat-label>Price</mat-label>
+    <input matInput type="number" class="example-right-align" placeholder="0" [disabled]="disabled" [ngModel]="value"
+        (ngModelChange)="change($event)" (blur)="blur()">
+    <span matTextPrefix>$&nbsp;</span>
+    <span matTextSuffix>.00</span>
+</mat-form-field>

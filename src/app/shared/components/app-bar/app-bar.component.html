@@ -1,0 +1,10 @@
+<mat-toolbar>
+    <ng-content></ng-content>
+    <div class="right">
+        <div matTooltip="add new" *ngIf="addBtn">
+            <a mat-button mat-raised-button color="primary" [routerLink]="'new'" class="add-btn">+</a>
+          </div>
+    </div>
+</mat-toolbar>
+
+

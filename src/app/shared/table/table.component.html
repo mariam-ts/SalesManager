@@ -1,7 +1,12 @@
-<input matInput (keyup)="applyFilter($event)" placeholder="Search columns" #input>
-<table mat-table [dataSource]="(dataSource$ | async)?? matTableData" class="mat-elevation-z8">
-  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-</table>
+<mat-form-field class="example-full-width search-field">
+  <input matInput (keyup)="applyFilter($event)" placeholder="Search columns" #input>
+</mat-form-field>
+<div class="table">
+  <table mat-table [dataSource]="(dataSource$ | async)?? matTableData" class="mat-elevation-z8">
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div>
+
 <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons aria-label="Select page of periodic elements">
 </mat-paginator>

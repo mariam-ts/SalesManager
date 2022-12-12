@@ -1,1 +1,16 @@
-<router-outlet></router-outlet>
+<mat-sidenav-container class="example-container" autosize class="theme-light">
+  <mat-sidenav #sidenav mode="side" opened >
+    <mat-icon (click)="showSideNav = !showSideNav">list</mat-icon>
+    <ul *ngIf="showSideNav" [@slideVertical] class="nav-list">
+      <li routerLink="/products">
+        Products
+      </li>
+      <li routerLink="/managers">
+        Managers
+      </li>
+    </ul>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
