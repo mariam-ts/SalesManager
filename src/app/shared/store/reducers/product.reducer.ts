@@ -10,6 +10,19 @@ export function productReducer(state: Product[] = defaultProductsState, action: 
             return state.push(action.payload)
         case ProductManagementActions.REMOVE_PRODUCT:
             return state.filter((obj) => obj.id !== action.payload);
+        case ProductManagementActions.BUY_PRODUCT:
+            {
+                return state.map((p)=> {
+                    if(p.id === action.payload.id){
+                        return {
+                            ...p,
+                            quantity: action.payload.quantity-1
+                        }
+                    }
+                    return p;
+
+                })
+            }
         case ProductManagementActions.UPDATE_PRODUCT:
             {
                 var newState = state.filter((obj) => obj.id !== action.payload.id);

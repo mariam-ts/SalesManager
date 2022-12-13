@@ -1,0 +1,12 @@
+<ng-container matColumnDef>
+    <th mat-header-cell *matHeaderCellDef bccSort>
+      <span [matTooltip]="headerText" matTooltipPosition="above">
+        {{headerText}}
+      </span>
+    </th>
+    <td mat-cell *matCellDef="let data">
+        <button mat-raised-button color="primary" (click)="actionClick.emit(data)">
+            {{action}}
+            </button>
+    </td>
+  </ng-container>

@@ -13,6 +13,9 @@ export class ProductManagementService {
   removeProduct(id: number) {
     this._store.dispatch(new productsAction.removeProduct(id));
   }
+  buyProduct(product: Product) {
+    this._store.dispatch(new productsAction.buyProduct(product));
+  }
   updateProduct(product: Product){
     this._store.dispatch(new productsAction.updateProduct(product))
   }

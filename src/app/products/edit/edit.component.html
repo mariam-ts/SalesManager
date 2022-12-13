@@ -1,4 +1,4 @@
-<app-shared-bar *ngIf="product; else edit">Create Products</app-shared-bar>
+<app-shared-bar *ngIf="!product; else edit">Create Products</app-shared-bar>
 <ng-template #edit>
     <app-shared-bar>Edit Products</app-shared-bar>
 </ng-template>
@@ -7,7 +7,7 @@
     <app-text-field [formControl]="$any(form).controls.name" label="Name"></app-text-field>
     <app-money-field [formControl]="$any(form).controls.price" label="Price"></app-money-field>
     <app-number-field [formControl]="$any(form).controls.quantity" label="Quantity"></app-number-field>
-    <button *ngIf="product; else update">Create</button>
+    <button *ngIf="!product; else update" (click)="creaateProduct$.next('')">Create</button>
     <ng-template #update>
         <button mat-button color="primary">Update</button>
     </ng-template>

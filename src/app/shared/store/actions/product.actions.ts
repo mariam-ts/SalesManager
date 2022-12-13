@@ -5,6 +5,7 @@ export const ADD_PRODUCT = '[Post] AddProduct';
 export const REMOVE_PRODUCT = '[Post] RemoveProduct';
 export const UPDATE_PRODUCT = '[Post] UpdateProduct';
 export const UPDATE_PRODUCTS = '[Post] UpdateProducts';
+export const BUY_PRODUCT = '[Post] BuyProducts';
 
 export class addProduct implements Action {
     readonly type = ADD_PRODUCT;
@@ -13,6 +14,11 @@ export class addProduct implements Action {
 export class removeProduct implements Action {
     readonly type = REMOVE_PRODUCT;
     constructor(public payload: number) { }
+}
+
+export class buyProduct implements Action {
+    readonly type = BUY_PRODUCT;
+    constructor(public payload: Product) { }
 }
 export class updateProduct implements Action {
     readonly type = UPDATE_PRODUCT;
@@ -24,5 +30,5 @@ export class updateProducts implements Action {
     constructor(public payload: Product[]) { }
 }
 
-export type ProductManagementActions = addProduct | removeProduct | updateProduct | updateProducts;
+export type ProductManagementActions = addProduct | removeProduct | updateProduct | updateProducts | buyProduct;
 

@@ -4,4 +4,5 @@
   <app-table-column-text name="name" headerText="Name"></app-table-column-text>
   <app-table-column-text name="quantity" headerText="Quantity"></app-table-column-text>
   <app-table-column-money name="price" headerText="Price" [currency]="currency.USD"></app-table-column-money>
+  <app-table-column-action name="action" headerText="action" action="buy" (actionClick)="buy$.next($event)"></app-table-column-action>
 </app-table>

@@ -8,6 +8,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { TableColumnMoneyComponent } from './columns/money-column';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { TableColumnDateComponent } from './columns/date-column';
+import { TableColumnActionComponent } from './columns/action-column';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { TableColumnDateComponent } from './columns/date-column';
     TableComponent,
     TableColumnTextComponent,
     TableColumnMoneyComponent,
-    TableColumnDateComponent
+    TableColumnDateComponent,
+    TableColumnActionComponent
   ],
   imports: [
     CommonModule,
@@ -28,7 +30,8 @@ import { TableColumnDateComponent } from './columns/date-column';
     TableComponent,
     TableColumnTextComponent,
     TableColumnMoneyComponent,
-    TableColumnDateComponent
+    TableColumnDateComponent,
+    TableColumnActionComponent
   ]
 })
 export class TableModule { }
