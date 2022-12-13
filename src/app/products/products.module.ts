@@ -5,6 +5,7 @@ import { ProductsComponent } from "./products.component";
 import { EditComponent } from './edit/edit.component';
 import { CommonModule } from "@angular/common";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { ProductManagementService } from "@app/shared/store/services/products.service";
 
 @NgModule({
   declarations: [ProductsComponent, EditComponent],
@@ -26,6 +27,7 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
         path: ':productId',
         component: EditComponent
       }]),
-  ]
+  ],
+  providers: [ ProductManagementService ]
 })
 export class ProductsModule { }

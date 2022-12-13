@@ -6,6 +6,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './shared/modules/material.module';
 import { AuthGuard } from './shared/guard/auth.guard';
 import { AuthService } from './shared/services/auth.service';
+import { StoreModule } from '@ngrx/store';
+import appReducers from './shared/store/app.reducers';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,8 @@ import { AuthService } from './shared/services/auth.service';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    StoreModule.forRoot(appReducers),
   ],
   providers: [AuthGuard, AuthService],
   bootstrap: [AppComponent]
